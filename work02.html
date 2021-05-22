@@ -1,0 +1,187 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>work02</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="work02.css">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(document).ready(function (){
+                $(".slideshow").each(function(){
+                    let slideImgs = $(this).find("img"),
+                    slideImgsCount = slideImgs.length,
+                    currentIndex = 0;
+                    
+                    slideImgs.eq(currentIndex).fadeIn();
+                    
+                    setInterval(showNext, 2000);
+                    
+                    function showNext(){
+                        let nextIndex = (currentIndex+1) % slideImgsCount;
+                        slideImgs.eq(currentIndex).fadeOut();
+                        slideImgs.eq(nextIndex).fadeIn();
+                        currentIndex = nextIndex;
+                    }
+                });
+                $(".games").mouseover(function(){
+                    $(".mask", this).fadeIn("fast");
+                });
+                $(".games").mouseleave(function(){
+                    $(".mask", this).fadeOut("fast");
+                });
+            });
+        </script>
+    </head>
+    <body class="bodystyle">
+        <header class="headerstyle">
+            <div>
+                <div class="logotype">
+                    <a href="work02.html">
+                        <img src="picture/logo.png">
+                        <input type="button" value="Lab_code">
+                    </a>
+                </div>
+                <ul class="topleftbtn">
+                    <li><input type="button" value="Games"></li>
+                    <li><input type="button" value="Plans"></li>
+                    <li><input type="button" value="Educators"></li>
+                    <li><input type="button" value="Blog"></li>
+                </ul>
+                <ul class="toprightbtn">
+                    <li>Login</li>
+                    <li>JOIN NOW</li>
+                </ul>
+            </div>
+            <div class="para">
+                <h2>Learn coding with us</h2>
+                <p>Lab_code is something about the future.</p>
+                <input type="button" value="JOIN US" onclick="window.open('https://www.facebook.com/')">
+            </div>
+            <div class="slideshow">
+                <img src="picture/icon.jfif">
+                <img src="picture/logo.png">
+            </div>
+        </header>
+        <div class="para2">
+            <h1>benify in our lab_code</h1>
+            <div>
+                <img src="picture/icon.jfif">
+                <h4>FUN</h4>
+                <p>You can enjoy coding.</p>
+            </div>
+            <div>
+                <img src="picture/icon.jfif">
+                <h4>ACHIEVEMENTS</h4>
+                <p>Get achievements in coding life.</p>
+            </div>
+            <div>
+                <img src="picture/icon.jfif">
+                <h4>Future</h4>
+                <p>Just win someone now.</p>
+            </div>
+        </div>
+        <hr/>
+        <section align="center" >
+            <div class="games">
+                <a href="https://www.101novel.com/ck101/87534/" target="_blank">
+                    <img src="picture/read more.png" class="mask">
+                    <img src="picture/icon.jfif">
+                    <div>game1:asasdasd</div>
+                </a>
+            </div>
+            <div class="games">
+                <a href="https://www.101novel.com/ck101/87534/" target="_blank">
+                    <img src="picture/read more.png" class="mask">
+                    <img src="picture/icon.jfif">
+                    <div>game2:as00sdasd</div>
+                </a>
+            </div>
+            <div class="games">
+                <a href="https://www.101novel.com/ck101/87534/" target="_blank">
+                    <img src="picture/read more.png" class="mask">
+                    <img src="picture/icon.jfif">
+                    <div>game3:asasd153sd</div>
+                </a>
+            </div>
+        </section>
+        <div class="plan">
+            <h1>Plans</h1>
+            <table align="center" rules="rows">
+                <tr>
+                    <th></th>
+                    <th><div>Free</div></th>
+                    <th><div>Pro</div>lv.1</th>
+                    <th><div>Pro</div>lv.2</th>
+                    <th><div>Pro</div><div>MAX</div></th>
+                </tr>
+                <tr>
+                    <th>fun</th>
+                    <td><img src="picture/icon.jfif"></td>
+                    <td><img src="picture/icon.jfif"></td>
+                    <td><img src="picture/icon.jfif"></td>
+                    <td><img src="picture/icon.jfif"></td>
+                </tr>
+                <tr>
+                    <th>more fun</th>
+                    <td></td>
+                    <td><img src="picture/icon.jfif"></td>
+                    <td><img src="picture/icon.jfif"></td>
+                    <td><img src="picture/icon.jfif"></td>
+                </tr>
+                <tr>
+                    <th>very fun</th>
+                    <td></td>
+                    <td></td>
+                    <td><img src="picture/icon.jfif"></td>
+                    <td><img src="picture/icon.jfif"></td>
+                </tr>
+                <tr>
+                    <th>super fun</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="picture/icon.jfif"></td>
+                </tr>
+            </table>
+        </div>
+        <footer class="footer">
+            <h3>lab code</h3>
+            <section>
+                <div>
+                    <h5>FEATURES</h5>
+                    <ul>
+                        <li><a>Games</a></li>
+                        <li><a>Pricing</a></li>
+                        <li><a>Group Plans</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>FOLLOW</h5>
+                    <ul>
+                        <li>
+                            <img src="picture/icon.jfif">
+                            <span>Facebook</span>
+                        </li>
+                        <li>
+                            <img src="picture/icon.jfif">
+                            <span>Line</span>
+                        </li>
+                        <li>
+                            <img src="picture/icon.jfif">
+                            <sapn>Youtube</sapn>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>SUPPORT</h5>
+                    <ul>
+                        <li>my team</li>
+                        <li>my team</li>
+                        <li>my team</li>
+                    </ul>
+                </div>
+                <p>© 2021 LuiLiXain. All rights reserved.</p>
+            </section>
+        </footer>
+    </body>
+</html>
